@@ -1,0 +1,18 @@
+spring:
+    application:
+        name: fittness_app
+    datasource:
+        url: jdbc:postgresql://localhost:5432/fitness-project
+        username: postgres
+        password: 0809
+    jpa:
+        hibernate:
+            ddl-auto: update
+        database-platform: org.hibernate.dialect.PostgreSQLDialect 
+
+    
+        
+
+
+
+    
