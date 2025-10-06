@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.fittness_app.Dto.UserRegister;
 import com.example.fittness_app.Dto.UserResponse;
+import com.example.fittness_app.Mapper.UserMapper;
 import com.example.fittness_app.Models.User;
 import com.example.fittness_app.RepoLayer.UserRepository;
 
@@ -28,17 +29,17 @@ public class UserService {
         user.setPassword(register.getPassword());
 
         User savedUser = userRepository.save(user);
-        UserResponse userResponse = new UserResponse();
+        return UserMapper.mapToUserResponse(savedUser);
 
-        userResponse.setFirstname(savedUser.getFirstname());
-        userResponse.setLastname(savedUser.getLastname());
-        userResponse.setPassword(savedUser.getPassword());
-        userResponse.setEmail(savedUser.getEmail());
-        userResponse.setId(savedUser.getId());
-        userResponse.setCreatedAt(savedUser.getCreatedAt());
+    }
 
-        userResponse.setUpdatedAt(savedUser.getUpdatedAt());
-        return userResponse;
+    public UserResponse getUserProfile(String userId) {
+
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("user not found"));
+
+        return UserMapper.mapToUserResponse(user);
+
     }
 
 }

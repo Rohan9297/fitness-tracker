@@ -4,9 +4,13 @@ import java.time.LocalDateTime;
 
 import com.example.fittness_app.Models.UserRole;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserResponse {
 
     private String id;
