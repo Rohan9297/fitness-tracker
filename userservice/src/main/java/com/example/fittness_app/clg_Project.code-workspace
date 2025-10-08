@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../../clg_Project"
+		},
+		{
+			"path": "../../../../../../../../coding/java/advanceJava"
+		},
+		{
+			"path": "../../../../../../../../coding/banking-apllication"
+		},
+		{
+			"path": "../../../../../../../../coding/research_assistant"
+		},
+		{
+			"name": "fittness_app",
+			"path": "../../../../../../.."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.compile.nullAnalysis.mode": "disabled",
+		"java.debug.settings.onBuildFailureProceed": true
+	}
+}

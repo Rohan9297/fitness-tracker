@@ -1,10 +1,10 @@
-package com.activity_service.demo;
+package com.example.activityservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class ActivityserviceApplicationTests {
 
 	@Test
 	void contextLoads() {

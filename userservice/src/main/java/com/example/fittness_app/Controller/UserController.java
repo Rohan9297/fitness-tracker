@@ -33,6 +33,7 @@ public class UserController {
     public ResponseEntity<UserResponse> getUserProfile(@PathVariable String userId) {
 
         return ResponseEntity.ok(UserService.getUserProfile(userId));
+
     }
 
 }
