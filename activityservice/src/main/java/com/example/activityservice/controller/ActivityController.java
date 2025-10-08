@@ -20,7 +20,7 @@ public class ActivityController {
 
     ActivityService activityservice;
 
-    @PostMapping("path")
+    @PostMapping("/request")
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest request) {
         // TODO: process POST request
 

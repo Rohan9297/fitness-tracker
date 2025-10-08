@@ -1,6 +1,8 @@
 package com.example.activityservice.DTO;
 
 import java.time.LocalDateTime;
+import java.util.Map;
+
 import com.example.activityservice.model.ActivityType;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +20,7 @@ public class ActivityResponse {
     private Integer caloriesBurned;
     private LocalDateTime startTime;
 
-    // private Map<String, Object> additionalMatrices;
+    private Map<String, Object> additionalMatrices;
 
     private LocalDateTime createATime;
     private LocalDateTime upDateTime;
