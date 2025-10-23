@@ -1,4 +1,4 @@
-package com.example.fittness_app.Models;
+package com.example.UserService.Models;
 
 public enum UserRole {
     USER, ADMIN

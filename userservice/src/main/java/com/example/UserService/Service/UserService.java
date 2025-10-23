@@ -1,12 +1,12 @@
-package com.example.fittness_app.Service;
+package com.example.UserService.Service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.fittness_app.Dto.UserRegister;
-import com.example.fittness_app.Dto.UserResponse;
-import com.example.fittness_app.Mapper.UserMapper;
-import com.example.fittness_app.Models.User;
-import com.example.fittness_app.RepoLayer.UserRepository;
+import com.example.UserService.Dto.UserRegister;
+import com.example.UserService.Dto.UserResponse;
+import com.example.UserService.Mapper.UserMapper;
+import com.example.UserService.Models.User;
+import com.example.UserService.RepoLayer.UserRepository;
 
 import lombok.AllArgsConstructor;
 
@@ -40,6 +40,11 @@ public class UserService {
 
         return UserMapper.mapToUserResponse(user);
 
+    }
+
+    public Boolean existById(String userId) {
+
+        return userRepository.existsById(userId);
     }
 
 }

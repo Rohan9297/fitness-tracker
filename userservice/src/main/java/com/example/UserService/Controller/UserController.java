@@ -1,11 +1,11 @@
-package com.example.fittness_app.Controller;
+package com.example.UserService.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.fittness_app.Dto.UserRegister;
-import com.example.fittness_app.Dto.UserResponse;
-import com.example.fittness_app.Service.UserService;
+import com.example.UserService.Dto.UserRegister;
+import com.example.UserService.Dto.UserResponse;
+import com.example.UserService.Service.UserService;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -36,4 +36,10 @@ public class UserController {
 
     }
 
+    @GetMapping("/{userId}/validate")
+    public ResponseEntity<Boolean> existById(@PathVariable String userId) {
+
+        return ResponseEntity.ok(UserService.existById(userId));
+
+    }
 }

@@ -22,7 +22,6 @@ public class ActivityController {
 
     @PostMapping("/request")
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest request) {
-        // TODO: process POST request
 
         return ResponseEntity.ok(activityservice.trackActivity(request));
     }

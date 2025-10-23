@@ -1,6 +1,6 @@
 spring:
     application:
-        name: fittness_app
+        name: FITNESS-APP    
     datasource:
         url: jdbc:postgresql://localhost:5432/fitness-project
         username: postgres
@@ -10,9 +10,16 @@ spring:
             ddl-auto: update
         database-platform: org.hibernate.dialect.PostgreSQLDialect 
 
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        prefer-ip-address: true
+
 server:
-    port: 8081   
+    port: 8081
 
 
 
-    
+

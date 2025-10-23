@@ -1,7 +1,7 @@
-package com.example.fittness_app.Mapper;
+package com.example.UserService.Mapper;
 
-import com.example.fittness_app.Dto.UserResponse;
-import com.example.fittness_app.Models.User;
+import com.example.UserService.Dto.UserResponse;
+import com.example.UserService.Models.User;
 
 public class UserMapper {
 
