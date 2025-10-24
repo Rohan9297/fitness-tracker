@@ -15,6 +15,6 @@ public class WebclientConfig {
 
     @Bean
     public WebClient userServiceWebClient(WebClient.Builder webClientBuilder) {
-        return webClientBuilder.baseUrl("http://FITNESS-APP").build(); // Match exact service name
+        return webClientBuilder.baseUrl("http://FITNESS-APP").build();
     }
 }
