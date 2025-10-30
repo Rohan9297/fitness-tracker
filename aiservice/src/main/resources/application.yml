@@ -5,6 +5,7 @@ spring:
         mongodb:
             uri: mongodb://localhost:27017/airecommendationfitness
             database: airecommendationfitness
+            auto-index-creation: true
 
 
 

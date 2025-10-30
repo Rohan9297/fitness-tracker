@@ -10,11 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.Builder;
 import lombok.Data;
 
-@Document(collation = "recommendation")
+@Document(collection = "recommendations")
 @Data
 @Builder
 
-public class Recommendation{
+public class Recommendation {
 
     @Id
     private String id;

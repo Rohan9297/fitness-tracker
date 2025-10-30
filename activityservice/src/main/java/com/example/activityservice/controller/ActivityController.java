@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 public class ActivityController {
 
-    ActivityService activityservice;
+    public final ActivityService activityservice;
 
     @PostMapping("/request")
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest request) {

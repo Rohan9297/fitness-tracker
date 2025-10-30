@@ -1,5 +1,7 @@
 package com.example.activityservice.service;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import com.example.activityservice.DTO.ActivityRequest;
@@ -16,6 +18,9 @@ public class ActivityService {
 
     private final ActivityRepository activityRepository;
     private final UserValidationService userValidationService;
+    private final KafkaTemplate<String, Activity> kafkaTemplate;
+    @Value("${kafka.topic.name:activity-events}")
+    private String topicName;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
 
@@ -35,6 +40,8 @@ public class ActivityService {
                 .build();
 
         Activity savedActivity = activityRepository.save(activity);
+
+        kafkaTemplate.send(topicName, savedActivity.getUserId(), savedActivity);
 
         return ActivityMapper.activityToActivityResponse(savedActivity);
     }
