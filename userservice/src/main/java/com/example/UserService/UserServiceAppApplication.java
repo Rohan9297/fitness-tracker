@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class UserServiceAppApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(UserServiceAppApplication.class, args);
 
 	}
