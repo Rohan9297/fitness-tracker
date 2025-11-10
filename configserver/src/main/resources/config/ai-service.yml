@@ -1,0 +1,46 @@
+spring:
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/airecommendationfitness
+            database: airecommendationfitness
+            auto-index-creation: true
+    kafka:
+        bootstrap-servers: localhost:9092
+        consumer:
+            group-id: activity-processor-group
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+            properties:
+                spring.json.use.type.headers: false
+                spring.json.trusted.packages: '*'
+                spring.json.value.default.type: com.fitness.aiservice.model.Activity
+
+
+gemini:
+    api:
+        url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+        key: -0hY
+
+        # AIzaSyBbGTpYNQolMCiF6doc1ZBXOCM4fhfXwdI
+        # AIzaSyARDTARMvj8qOUNNqQsSL4jQUtaIG0-0hY
+        
+kafka:    
+  topic:
+    name: activity-events          
+
+
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        prefer-ip-address: true
+
+server:
+    port: 8083
+
+
+
+
+
