@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ActivityResponse {
+    private String id;
     private String userId;
     private ActivityType activityType;
     private Integer duration;

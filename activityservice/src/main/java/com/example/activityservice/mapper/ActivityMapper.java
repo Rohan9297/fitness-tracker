@@ -8,7 +8,7 @@ public class ActivityMapper {
     public static Activity activityResponsetoActivity(ActivityResponse activityResponse) {
 
         Activity activity = new Activity(
-
+                activityResponse.getId(),
                 activityResponse.getUserId(),
                 activityResponse.getActivityType(),
                 activityResponse.getDuration(),
@@ -23,6 +23,7 @@ public class ActivityMapper {
 
     public static ActivityResponse activityToActivityResponse(Activity activity) {
         ActivityResponse activityResponse = new ActivityResponse(
+                activity.getId(),
                 activity.getUserId(),
                 activity.getActivityType(),
                 activity.getDuration(),

@@ -9,6 +9,7 @@ import com.example.UserService.Service.UserService;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 @RequestMapping("/api/user")
 @AllArgsConstructor
+@Slf4j
 public class UserController {
 
     private UserService UserService;
@@ -38,8 +40,7 @@ public class UserController {
 
     @GetMapping("/{userId}/validate")
     public ResponseEntity<Boolean> existById(@PathVariable String userId) {
-
+        log.info("activity api call is hitted");
         return ResponseEntity.ok(UserService.existById(userId));
-
     }
 }

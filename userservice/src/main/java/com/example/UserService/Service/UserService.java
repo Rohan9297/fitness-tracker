@@ -9,9 +9,11 @@ import com.example.UserService.Models.User;
 import com.example.UserService.RepoLayer.UserRepository;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class UserService {
     UserRepository userRepository;
 
@@ -43,7 +45,7 @@ public class UserService {
     }
 
     public Boolean existById(String userId) {
-
+        log.info("cheking for user is exist or not");
         return userRepository.existsById(userId);
     }
 
